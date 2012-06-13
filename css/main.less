@@ -1,5 +1,49 @@
+@import "elements.less";
+@import "grid.less";
+@import "reset.less";
+
 * {
 }
 
 body {
 }
+
+
+/* --ELEMENTs MIXINS --------------------------------------------------------------------------------
+
+    .gradient( @color: #F5F5F5, @start: #EEE, @stop: #FFF )
+    .bw-gradient( @color: #F5F5F5, @start: 0, @stop: 255 )
+    .bordered( @top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE )
+    .drop-shadow( @x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1 )
+    .rounded( @radius: 2px )
+    .border-radius( @topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0 )
+    .opacity( @opacity: 0.5 )
+    .transition-duration( @duration: 0.2s )
+    .rotation( @deg:5deg ){
+    .scale( @ratio:1.5 ){
+    .transition( @duration:0.2s, @ease:ease-out )
+    .inner-shadow( @horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4 )
+    .box-shadow( @arguments )
+    .columns( @colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid,
+      @columnRuleWidth: 1px )
+    .translate( @x:0, @y:0 )
+
+
+-----GRID MIXINS ------------------------------------------------------------------------------------
+
+  Set these variables (defaults below, 12 col 960px grid)
+  @column-width: 60;
+  @gutter-width: 20;
+  @columns: 12;
+
+  If you want a fluid grid
+  @total-width: 100%;
+
+  Mixins
+  .column(3);
+  .row(9)
+    .column(3,9);
+  .push(2);
+  .pull(2);
+
+*/
