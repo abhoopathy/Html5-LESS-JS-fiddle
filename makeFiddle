@@ -1,0 +1,15 @@
+#!/bin/bash
+
+EXPECTED_ARGS=1
+E_BADARGS=65
+
+if [ $# -ne $EXPECTED_ARGS ]
+then
+    echo "Usage: `basename $0` {new fiddle directory}"
+    exit $E_BADARGS
+fi
+
+fiddle_name="$*"  # Doesn't work properly if "$*" isn't quoted.
+cd '/Users/aneeshbhoopathy/Dropbox/public/fiddles'
+cp -r 'template' $fiddle_name
+./openFiddle $fiddle_name

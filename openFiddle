@@ -1,0 +1,15 @@
+#!/bin/bash
+
+EXPECTED_ARGS=1
+E_BADARGS=65
+
+if [ $# -ne $EXPECTED_ARGS ]
+then
+    echo "Usage: `basename $0` {new fiddle directory}"
+    exit $E_BADARGS
+fi
+
+fiddle_name="$*"  # Doesn't work properly if "$*" isn't quoted.
+cd "/Users/aneeshbhoopathy/Dropbox/Public/fiddles/$fiddle_name"
+open index.html
+vim -c 'e css/main.less|vs scripts/main.js|sp index.html'

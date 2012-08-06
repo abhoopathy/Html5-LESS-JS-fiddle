@@ -1,0 +1,1 @@
+vim -c 'e css/style.css|vs js/main.js|sp index.html'
